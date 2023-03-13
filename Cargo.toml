@@ -1,0 +1,15 @@
+[package]
+name = "pico-rs"
+version = "0.0.1"
+authors = ["Andreas Doerr"]
+description = "Firmware for the Raspberry Pi Pico"
+repository = "https://github.com/adoerr/badger-rs.git"
+license = "MIT OR Apache-2.0"
+edition = "2021"
+readme = "README.md"
+keywords = ["firmware", "RP2040", "pico"]
+categories = ["embedded-development"]
+
+
+
+[dependencies]
