@@ -2,7 +2,7 @@
 protocol = "Swd"
 
 [default.general]
-chip = "rp2040"
+chip = "RP2040"
 
 [default.rtt]
 enabled = true
