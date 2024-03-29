@@ -12,7 +12,7 @@ use bsp::{
 };
 use defmt::*;
 use defmt_rtt as _;
-use embedded_hal::digital::v2::OutputPin;
+use embedded_hal::digital::OutputPin;
 use panic_probe as _;
 use rp_pico as bsp;
 

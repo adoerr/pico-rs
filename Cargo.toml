@@ -11,16 +11,16 @@ keywords = ["firmware", "RP2040", "pico"]
 categories = ["embedded-development"]
 
 [dependencies]
-cortex-m = { version = "0.7" }
-cortex-m-rt = { version = "0.7" }
-defmt = { version = "0.3" }
-defmt-rtt = { version = "0.4" }
-embedded-hal = { version = "0.2.5", features = ["unproven"] }
-panic-probe = { version = "0.3", features = ["print-defmt"] }
-rp-pico = { version = "0.7" }
+cortex-m = { version = "0.7.7" }
+cortex-m-rt = { version = "0.7.3" }
+defmt = { version = "0.3.6" }
+defmt-rtt = { version = "0.4.0" }
+embedded-hal = { version = "1.0.0" }
+panic-probe = { version = "0.3.1", features = ["print-defmt"] }
+rp-pico = { version = "0.8.0" }
 
 [build-dependencies]
-anyhow = { version = "1.0.70" }
+anyhow = { version = "1.0.81" }
 
 # cargo build/run
 [profile.dev]
