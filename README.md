@@ -10,6 +10,12 @@
 
 Writing Zephyr applications in Rust. Support for Rust is provided by the [zephyr-rs](https://github.com/adoerr/zephyr-rs) Zephyr module.
 
+The [zephyr-rs](https://github.com/adoerr/zephyr-rs) module is currently included as a [west project](https://docs.zephyrproject.org/latest/develop/west/basics.html#west-workspace). It could also be added to a Zephyr workspace instead.
+
+<p align="center">
+🚫 This project is for educational and explorative purposes only. 🚫
+</p>
+
 <br>
 
 ## Applications
