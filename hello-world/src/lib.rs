@@ -1,5 +1,6 @@
 #![no_std]
 
+#[allow(unused_imports)]
 use panic_halt as _;
 
 #[no_mangle]
