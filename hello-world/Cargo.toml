@@ -7,24 +7,7 @@ edition = "2021"
 crate-type = ["staticlib"]
 
 [dependencies]
-cortex-m = { version = "0.7.7" }
-cortex-m-rt = { version = "0.7.4" }
-defmt = { version = "0.3.6" }
-defmt-rtt = { version = "0.4.0" }
-panic-probe = { version = "0.3.1", features = ["print-defmt"] }
-portable-atomic = { version = "1.6.0", features = ["critical-section"] }
-static_cell = { version = "2.0.0" }
-
-embassy-executor = { version = "0.5.0", features = ["task-arena-size-32768", "arch-cortex-m", "executor-thread", "executor-interrupt", "defmt", "integrated-timers"] }
-embassy-rp = { version = "0.1.0", features = ["defmt", "unstable-pac", "time-driver", "critical-section-impl"] }
-embassy-time = { version = "0.3.0", features = ["defmt", "defmt-timestamp-uptime"] }
+panic-halt = { version = "0.2.0" }
 
 zephyr-sys = { path = "../../zephyr-rs/crates/zephyr-sys" }
-
-[patch.crates-io]
-embassy-time = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
-embassy-rp = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
-embassy-executor = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
-
-
 
