@@ -15,7 +15,7 @@ Writing Rust applications for the `RP2040` microcontroller using the
 
 ## Applications
 
-- [blinky](./blinky/) - Blinks an LED on the Pico board.
+- [blinky](./apps/blinky/) - Blinks an LED on the Pico board.
 
 <br>
 

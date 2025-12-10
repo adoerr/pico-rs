@@ -1,4 +1,4 @@
-//! Add the linker flag -Tdefmt.x is added
+//! Add the linker flag -Tdefmt.x
 
 fn main() {
     println!("cargo:rustc-link-arg-examples=-Tdefmt.x");

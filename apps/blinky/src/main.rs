@@ -1,3 +1,5 @@
+//! blinky — simple LED blink example for the Raspberry Pi Pico (RP2040).
+
 #![no_std]
 #![no_main]
 
@@ -10,16 +12,10 @@ use rp_pico::{
 
 #[entry]
 fn main() -> ! {
-    // Grab our singleton objects
     let mut pac = pac::Peripherals::take().unwrap();
     let core = pac::CorePeripherals::take().unwrap();
-
-    // Set up the watchdog driver - needed by the clock setup code
     let mut watchdog = hal::Watchdog::new(pac.WATCHDOG);
 
-    // Configure the clocks
-    //
-    // The default is to generate a 125 MHz system clock
     let clocks = hal::clocks::init_clocks_and_plls(
         rp_pico::XOSC_CRYSTAL_FREQ,
         pac.XOSC,
@@ -32,14 +28,9 @@ fn main() -> ! {
     .ok()
     .unwrap();
 
-    // The delay object lets us wait for specified amounts of time (in
-    // milliseconds)
     let mut delay = cortex_m::delay::Delay::new(core.SYST, clocks.system_clock.freq().to_Hz());
-
-    // The single-cycle I/O block controls our GPIO pins
     let sio = hal::Sio::new(pac.SIO);
 
-    // Set the pins up according to their function on this particular board
     let pins = rp_pico::Pins::new(
         pac.IO_BANK0,
         pac.PADS_BANK0,
@@ -47,14 +38,12 @@ fn main() -> ! {
         &mut pac.RESETS,
     );
 
-    // Set the LED to be an output
     let mut led_pin = pins.led.into_push_pull_output();
 
-    // Blink the LED at 1 Hz
     loop {
         led_pin.set_high().unwrap();
-        delay.delay_ms(500);
+        delay.delay_ms(1000);
         led_pin.set_low().unwrap();
-        delay.delay_ms(500);
+        delay.delay_ms(1000);
     }
 }

@@ -21,4 +21,4 @@ rustflags = [
 ]
 
 # Runner using the pico-probe SWD programmer/debugger
- runner = "probe-rs run --chip RP2040"
+runner = "probe-rs run --chip RP2040"
