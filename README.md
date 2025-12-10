@@ -1,26 +1,21 @@
-# 🪁 pico-rs 🦀
+# 🦀 pico-rs 🦀
 
 <br>
 
 <p align="center">
-    <img src="./zephyr.svg">
+    <img src="assets/RP2040.png" widht="400" height="200">
 </p>
 
 <br>
 
-Writing Zephyr applications in Rust. Support for Rust is provided by the [zephyr-rs](https://github.com/adoerr/zephyr-rs) Zephyr module.
-
-The [zephyr-rs](https://github.com/adoerr/zephyr-rs) module is currently included as a [west project](https://docs.zephyrproject.org/latest/develop/west/basics.html#west-workspace). It could also be added to a Zephyr workspace instead.
-
-<p align="center">
-🚫 This project is for educational and explorative purposes only. 🚫
-</p>
+Writing Rust applications for the `RP2040` microcontroller using the
+[Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) board.
 
 <br>
 
 ## Applications
 
-- [hello-world](./hello-world/) - A basic Zephyr app
+- [blinky](./blinky/) - Blinks an LED on the Pico board.
 
 <br>
 
@@ -34,7 +29,7 @@ make sure you get the [Debug Probe](https://www.raspberrypi.com/products/debug-p
 <br>
 
 <p align="center">
-    <img src="./RASP_PI_PICO_H_01.jpg" widht="400" height="200">
+    <img src="assets/pico-1.png" widht="400" height="200">
 </p>
 
 <br>
