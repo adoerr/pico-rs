@@ -1,4 +1,15 @@
 [workspace]
-members = []
+members = ["apps/blinky", "board"]
 
 resolver = "3"
+
+[workspace.dependencies]
+cortex-m = { version = "0.7.7" }
+cortex-m-rt = { version = "0.7.5" }
+embedded-hal = { version = "1.0.0" }
+panic-halt = { version = "1.0.0" }
+rp2040-boot2 = { version = "0.3.0" }
+rp2040-hal = { version = "0.11.0" }
+
+# local dependencies
+rp-pico = { path = "board" }

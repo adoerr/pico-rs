@@ -22,16 +22,8 @@ Cargo.lock
 # Ignore JetBrains run files
 **/.run
 
-# Ignore Zephyr west stuff
-**/.west
-
 # Ignore build directories
 **/build
-
-# Ignore cmake direcotries
-**/cmake-build-debug-zephyr
-**/cmake-build-release-zephyr
-
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
