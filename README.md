@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-    <img src="assets/RP2040.png" widht="400" height="200">
+    <img src="assets/RP2040.png" width="300" height="200">
 </p>
 
 <br>
@@ -29,7 +29,7 @@ make sure you get the [Debug Probe](https://www.raspberrypi.com/products/debug-p
 <br>
 
 <p align="center">
-    <img src="assets/pico-1.png" widht="400" height="200">
+    <img src="assets/pico-1.png" width="600" height="200">
 </p>
 
 <br>
