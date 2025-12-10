@@ -16,6 +16,9 @@ fn main() -> ! {
     let core = pac::CorePeripherals::take().unwrap();
     let mut watchdog = hal::Watchdog::new(pac.WATCHDOG);
 
+    // after `boot2` stage finishes, clock configuration is in a `safe` default
+    // state with `XOSC` and `PLL`s disabled. The system is entirely running
+    // off the internal Ring Oscillator (`ROSC`) at roughly 6.5MHz.
     let clocks = hal::clocks::init_clocks_and_plls(
         rp_pico::XOSC_CRYSTAL_FREQ,
         pac.XOSC,
