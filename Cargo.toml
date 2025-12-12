@@ -1,15 +1,26 @@
-[workspace]
-members = ["apps/blinky", "board"]
+[package]
+name = "pico-rs"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
 
-resolver = "3"
-
-[workspace.dependencies]
-cortex-m = { version = "0.7.7" }
+[dependencies]
 cortex-m-rt = { version = "0.7.5" }
-embedded-hal = { version = "1.0.0" }
-panic-halt = { version = "1.0.0" }
-rp2040-boot2 = { version = "0.3.0" }
-rp2040-hal = { version = "0.11.0" }
+defmt = { version = "1.0.1" }
+defmt-rtt = { version = "1.1.0" }
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
 
-# local dependencies
-rp-pico = { path = "board" }
+embassy-executor = { version = "0.9.1", features = ["arch-cortex-m", "executor-thread", "executor-interrupt", "defmt"] }
+embassy-rp = { version = "0.9.0", features = ["rp2040", "defmt", "unstable-pac", "time-driver", "critical-section-impl"] }
+embassy-time = { version = "0.5.0", features = ["defmt", "defmt-timestamp-uptime"] }
+
+[patch.crates-io]
+embassy-embedded-hal = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+embassy-executor = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+embassy-futures = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+embassy-rp = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+embassy-time = { git = "https://github.com/embassy-rs/embassy", branch = "main" }
+
+[profile.release]
+debug = 2
