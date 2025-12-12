@@ -1,12 +1,12 @@
 use std::{env, fs::File, io::Write, path::PathBuf};
 
 fn main() {
-    let out = &PathBuf::from(env::var_os("OUT_DIR").unwrap());
+    let out = &PathBuf::from(env::var_os("OUT_DIR").expect("OUT_DIR env var not set"));
 
     File::create(out.join("memory.x"))
-        .unwrap()
+        .expect("failed to create memory.x")
         .write_all(include_bytes!("memory.x"))
-        .unwrap();
+        .expect("failed to write memory.x");
     println!("cargo:rustc-link-search={}", out.display());
 
     // By default, Cargo will re-run a build script whenever
