@@ -1,7 +1,7 @@
 use std::{fs::File, io::Write, path::PathBuf};
 
 fn main() {
-    let out = PathBuf::from(std::env::var_os("OUT_DIR").unwrap());
+    let out = PathBuf::from(std::env::var_os("OUT_DIR").expect("OUT_DIR env var not set"));
 
     File::create(out.join("memory.x"))
         .expect("failed to create memory.x")
@@ -14,5 +14,5 @@ fn main() {
 
     println!("cargo:rustc-link-arg-bins=--nmagic");
     println!("cargo:rustc-link-arg-bins=-Tlink.x");
-    //println!("cargo:rustc-link-arg-bins=-Tdefmt.x");
+    println!("cargo:rustc-link-arg-bins=-Tdefmt.x");
 }

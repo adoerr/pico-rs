@@ -3,8 +3,9 @@
 #![no_std]
 #![no_main]
 
+use defmt_rtt as _;
 use embedded_hal::digital::OutputPin;
-use panic_halt as _;
+use panic_probe as _;
 use rp_pico::{
     entry, hal,
     hal::{pac, prelude::*},
