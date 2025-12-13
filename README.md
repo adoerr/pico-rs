@@ -42,7 +42,6 @@ make sure you get the [Debug Probe](https://www.raspberrypi.com/products/debug-p
     <img src="assets/pinout.svg" width="800" height="600">
 </p>
 
-<br>
 ## Console
 
 `screen -L /dev/tty.usbmodemxxx 115200 -L`
