@@ -13,9 +13,11 @@ Writing Rust applications for the `RP2040` microcontroller using the
 
 <br>
 
-## Applications
+## Crates
 
-- [blinky](./apps/blinky/) - Blinks an LED on the Pico board.
+- [async](./async) - Embedded Async Rust using [embassy](https://github.com/embassy-rs/embassy)
+- [classic](./classic) -  Classic embedded Rust using [rp-hal](https://github.com/rp-rs/rp-hal)
+- [board](./board) - Board support crate for [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
 <br>
 
