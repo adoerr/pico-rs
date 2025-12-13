@@ -28,15 +28,6 @@ using a [(Armv6-M)](https://developer.arm.com/documentation/ddi0419/latest/) ISA
 [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/). For quality of life reasons,
 make sure you get the [Debug Probe](https://www.raspberrypi.com/products/debug-probe/) as well.
 
-<br>
-
-<p align="center">
-    <img src="assets/pico-1.png" width="600" height="200">
-</p>
-
-<br>
-
-## Pinout
 
 <p align="center">
     <img src="assets/pinout.svg" width="800" height="600">
