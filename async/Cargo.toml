@@ -1,0 +1,16 @@
+[package]
+name = "async"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+
+[dependencies]
+cortex-m-rt = { workspace = true }
+defmt = { workspace = true }
+defmt-rtt = { workspace = true }
+panic-probe = { workspace = true, features = ["print-defmt"] }
+
+embassy-executor = { workspace = true, features = ["arch-cortex-m", "executor-thread", "executor-interrupt", "defmt"] }
+embassy-rp = { workspace = true, features = ["rp2040", "defmt", "unstable-pac", "time-driver", "critical-section-impl"] }
+embassy-time = { workspace = true, features = ["defmt", "defmt-timestamp-uptime"] }
+

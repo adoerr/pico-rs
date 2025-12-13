@@ -1,0 +1,28 @@
+[package]
+name = "rp-pico"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+# Default features for RP2040 boards
+default = ["boot2", "rt", "critical-section-impl", "rom-func-cache"]
+
+# Multicore save critical section implementation for RP2040
+critical-section-impl = ["rp2040-hal/critical-section-impl"]
+
+# Second stage bootloader for RP2040
+boot2 = ["rp2040-boot2"]
+
+# Minimal startup / runtime for Cortex-M microcontrollers
+rt = ["cortex-m-rt", "rp2040-hal/rt"]
+
+# Memoize(cache) ROM function pointers on first use to improve performance
+rom-func-cache = ["rp2040-hal/rom-func-cache"]
+
+# This enables ROM functions for f64 math that were not present in the earliest RP2040s
+rom-v2-intrinsics = ["rp2040-hal/rom-v2-intrinsics"]
+
+[dependencies]
+cortex-m-rt = { workspace = true, optional = true }
+rp2040-boot2 = { workspace = true, optional = true }
+rp2040-hal = { workspace = true }
