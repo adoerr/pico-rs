@@ -3,7 +3,7 @@ use std::{env, fs::File, io::Write, path::PathBuf};
 fn main() {
     let out = &PathBuf::from(env::var_os("OUT_DIR").expect("OUT_DIR env var not set"));
 
-    File::create(out.join("../memory.x"))
+    File::create(out.join("memory.x"))
         .expect("failed to create memory.x")
         .write_all(include_bytes!("memory.x"))
         .expect("failed to write memory.x");
