@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
 
+[[bin]]
+name = "blinky-async"
+path = "src/bin/blinky.rs"
+
 [dependencies]
 cortex-m-rt = { workspace = true }
 defmt = { workspace = true }

@@ -1,0 +1,35 @@
+# Remove build artifacts
+@clean:
+    echo "{{BLUE}}Removing classic build artifacts...{{NORMAL}}"
+    cargo clean
+
+# Format and lint
+@check:
+    echo "{{BLUE}}Formatting and linting classic...{{NORMAL}}"
+    cargo +nightly fmt --all
+    cargo +nightly clippy --workspace --all-features -- -D warnings
+
+# Sort dependencies
+@sort:
+    echo "{{BLUE}}Sorting classic dependencies...{{NORMAL}}"
+    cargo sort -g
+
+# Update dependencies
+@update:
+    echo "{{BLUE}}Updating classic dependencies...{{NORMAL}}"
+    cargo update
+
+# Check for outdated  dependencies
+@outdated:
+    echo "{{BLUE}}Checking for outdated classic dependencies...{{NORMAL}}"
+    cargo outdated -R
+
+# Debug build
+@debug:
+    echo "{{BLUE}}Building async in classic mode...{{NORMAL}}"
+    cargo build
+
+# Release  build
+@release:
+    echo "{{BLUE}}Building classic in release mode...{{NORMAL}}"
+    cargo build --release
