@@ -9,7 +9,7 @@
 <br>
 
 Writing Rust applications for the `RP2040` microcontroller using the
-[Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) board.
+[Raspberry Pi Pico W](https://datasheets.raspberrypi.com/picow/pico-2-w-datasheet.pdf) board.
 
 <br>
 
