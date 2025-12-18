@@ -13,8 +13,12 @@ cortex-m-rt = { workspace = true }
 defmt = { workspace = true }
 defmt-rtt = { workspace = true }
 panic-probe = { workspace = true, features = ["print-defmt"] }
+static_cell = { workspace = true }
+portable-atomic = { workspace = true, features = ["critical-section"] }
 
 embassy-executor = { workspace = true, features = ["arch-cortex-m", "executor-thread", "executor-interrupt", "defmt"] }
 embassy-rp = { workspace = true, features = ["rp2040", "defmt", "unstable-pac", "time-driver", "critical-section-impl"] }
 embassy-time = { workspace = true, features = ["defmt", "defmt-timestamp-uptime"] }
 
+cyw43 = { workspace = true, features = ["defmt", "firmware-logs"] }
+cyw43-pio = { workspace = true, features = ["defmt"] }
