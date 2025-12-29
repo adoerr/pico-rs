@@ -15,9 +15,7 @@ Writing Rust applications for the `RP2040` microcontroller using the
 
 ## Crates
 
-- [async](./async) - Embedded Async Rust using [embassy](https://github.com/embassy-rs/embassy)
-- [classic](./classic) - Classic embedded Rust using [rp-hal](https://github.com/rp-rs/rp-hal)
-- [board](./board) - Board support crate for [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
+- [pico-rs](pico-rs) - Embedded Async Rust using [embassy](https://github.com/embassy-rs/embassy)
 
 <br>
 

@@ -1,5 +1,5 @@
 [package]
-name = "async"
+name = "pico-rs"
 version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
@@ -13,8 +13,8 @@ cortex-m-rt = { workspace = true }
 defmt = { workspace = true }
 defmt-rtt = { workspace = true }
 panic-probe = { workspace = true, features = ["print-defmt"] }
-static_cell = { workspace = true }
 portable-atomic = { workspace = true, features = ["critical-section"] }
+static_cell = { workspace = true }
 
 embassy-executor = { workspace = true, features = ["arch-cortex-m", "executor-thread", "executor-interrupt", "defmt"] }
 embassy-rp = { workspace = true, features = ["rp2040", "defmt", "unstable-pac", "time-driver", "critical-section-impl"] }

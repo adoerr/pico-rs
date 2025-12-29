@@ -1,26 +1,25 @@
-mod async 'async'
+mod pico 'pico-rs'
 
 # Remove build artifacts and disk image
-@clean: async::clean
-    rm -f disk_image.img
+@clean: pico::clean
 
 # Check formatting and linting
-@check: async::check
+@check: pico::check
 
 # Sort dependencies
-@sort: async::sort
+@sort: pico::sort
 
 # Update dependencies
-@update: async::update
+@update: pico::update
 
 # Check for outdated dependencies
-@outdated: async::outdated
+@outdated: pico::outdated
 
 # Release build all components
-@release: async::release
+@release: pico::release
 
 # Debug build all components
-@debug: async::debug
+@debug: pico::debug
 
 # Flash cyw43xx firmware to the board
 @flash-wifi:
