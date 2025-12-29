@@ -1,5 +1,5 @@
 [workspace]
-members = ["async", "board/rp-pico", "classic"]
+members = ["async", "board/rp-pico"]
 
 resolver = "3"
 

@@ -1,28 +1,27 @@
 mod async 'async'
 mod board 'board/rp-pico'
-mod classic 'classic'
 
 # Remove build artifacts and disk image
-@clean: async::clean board::clean classic::clean
+@clean: async::clean board::clean
     rm -f disk_image.img
 
 # Check formatting and linting
-@check: async::check board::check classic::check
+@check: async::check board::check
 
 # Sort dependencies
-@sort: async::sort board::sort classic::sort
+@sort: async::sort board::sort
 
 # Update dependencies
-@update: async::update board::update classic::update
+@update: async::update board::update
 
 # Check for outdated dependencies
-@outdated: async::outdated board::outdated classic::outdated
+@outdated: async::outdated board::outdated
 
 # Release build all components
-@release: async::release board::release classic::release
+@release: async::release board::release
 
 # Debug build all components
-@debug: async::debug board::debug classic::debug
+@debug: async::debug board::debug
 
 # Flash cyw43xx firmware to the board
 @flash-wifi:
