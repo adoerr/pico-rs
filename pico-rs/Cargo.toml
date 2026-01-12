@@ -7,6 +7,8 @@ license = "Apache-2.0"
 [[bin]]
 name = "blinky"
 path = "src/bin/blinky.rs"
+test = false
+harness = false
 
 [dependencies]
 cortex-m-rt = { workspace = true }

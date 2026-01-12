@@ -69,6 +69,7 @@ async fn main(spawner: Spawner) {
         .await;
 
     let delay = Duration::from_secs(1);
+
     loop {
         info!("led on!");
         control.gpio_set(0, true).await;
