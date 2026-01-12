@@ -6,6 +6,7 @@
 #![no_std]
 #![no_main]
 
+use cyw43::aligned_bytes;
 use cyw43_pio::{DEFAULT_CLOCK_DIVIDER, PioSpi};
 use defmt::*;
 use defmt_rtt as _;
@@ -37,8 +38,9 @@ async fn cyw43_task(
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_rp::init(Default::default());
-    let fw = unsafe { core::slice::from_raw_parts(0x10100000 as *const u8, 230321) };
-    let clm = unsafe { core::slice::from_raw_parts(0x10140000 as *const u8, 4752) };
+    let fw = aligned_bytes!("../../../assets/43439A0.bin");
+    let clm = aligned_bytes!("../../../assets/43439A0_clm.bin");
+    let nvram = aligned_bytes!("../../../assets/nvram_rp2040.bin");
 
     let pwr = Output::new(p.PIN_23, Level::Low);
     let cs = Output::new(p.PIN_25, Level::High);
@@ -58,7 +60,7 @@ async fn main(spawner: Spawner) {
     static STATE: StaticCell<cyw43::State> = StaticCell::new();
     let state = STATE.init(cyw43::State::new());
 
-    let (_net_device, mut control, runner) = cyw43::new(state, pwr, spi, fw).await;
+    let (_net_device, mut control, runner) = cyw43::new(state, pwr, spi, fw, nvram).await;
     spawner.spawn(unwrap!(cyw43_task(runner)));
 
     control.init(clm).await;

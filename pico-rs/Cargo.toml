@@ -5,7 +5,7 @@ edition = "2024"
 license = "Apache-2.0"
 
 [[bin]]
-name = "blinky-async"
+name = "blinky"
 path = "src/bin/blinky.rs"
 
 [dependencies]
