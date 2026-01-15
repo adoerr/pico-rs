@@ -21,6 +21,11 @@ mod pico 'pico-rs'
 # Debug build all components
 @debug: pico::debug
 
+#Run release binary
+@run binary:
+    echo "{{BLUE}}Flash and run binary...{{NORMAL}}"
+    cargo run --release --bin {{binary}}
+
 # Flash cyw43xx firmware to the board
 @flash-wifi:
     echo "{{BLUE}}Flashing cyw43 firmware...{{NORMAL}}"
