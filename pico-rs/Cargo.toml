@@ -10,7 +10,14 @@ path = "src/bin/blinky.rs"
 test = false
 harness = false
 
+[[bin]]
+name = "uart"
+path = "src/bin/uart.rs"
+test = false
+harness = false
+
 [dependencies]
+cortex-m = { workspace = true }
 cortex-m-rt = { workspace = true }
 defmt = { workspace = true }
 defmt-rtt = { workspace = true }
